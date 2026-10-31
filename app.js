@@ -60,9 +60,7 @@ function showStudentList() {
 }
 
 function addStudent() {
-  let studentCode = validateStudentCode("Nhập mã học viên: ")
-    .trim()
-    .toUpperCase();
+  let studentCode = prompt("Nhập mã học viên: ").trim().toUpperCase();
   if (findStudentIndex(studentCode) !== -1) {
     console.log(`Mã học viên ${studentCode} đã tồn tại!`);
     return;
@@ -84,9 +82,7 @@ function addStudent() {
 }
 
 function updateStudent() {
-  let code = validateStudentCode("Nhập mã học viên cần cập nhật: ")
-    .trim()
-    .toUpperCase();
+  let code = prompt("Nhập mã học viên cần cập nhật: ").trim().toUpperCase();
   let index = findStudentIndex(code);
   if (index === -1) {
     console.log(`Không tìm thấy học viên có mã ${code}`);
@@ -110,9 +106,7 @@ Tuổi mới: ${newAge} | Điểm đầu vào mới: ${newPlacementScore}`);
 }
 
 function deleteStudent() {
-  let code = validateStudentCode("Nhập mã học viên cần xóa: ")
-    .trim()
-    .toUpperCase();
+  let code = prompt("Nhập mã học viên cần xóa: ").trim().toUpperCase();
   let index = findStudentIndex(code);
   if (index === -1) {
     console.log(`Không tìm thấy học viên có mã ${code}`);
